@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppTask1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Button
+                x:Name="NavigateBtn"
+                Text="Navigate to About Page" 
+                Clicked="OnNavigationClicked"
+                HorizontalOptions="Center" />
+
+            <Line X1="0" Y1="0" X2="1000" Y2="0" Stroke="Gray"  HorizontalOptions="Center" StrokeThickness="1" />
+
+            <Label x:Name="lblOutput"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Enter Text Below " FontAttributes="Bold"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Entry x:Name="inputField"
+                    WidthRequest="500"
+                    Placeholder="Enter Text"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" />
+
+                <Button Text="Update Label"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="OnUpdateClicked"
+                        Margin="10,0,0,0"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
